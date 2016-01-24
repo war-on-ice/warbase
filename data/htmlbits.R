@@ -1,0 +1,292 @@
+pagebase1 <- '<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>'
+
+
+
+pagebase1a <- ' -- war-on-ice.com</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="http://war-on-ice.com/css/bootstrap.css" rel="stylesheet">
+    <link href="http://war-on-ice.com/css/capcheck.css" rel="stylesheet">
+    <link rel="stylesheet" id="twentytwelve-fonts-css"  href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext" type="text/css" media="all" />
+
+
+    <!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link href="http://war-on-ice.com/css/'
+
+
+pagebase1b <- 'styles.css" rel="stylesheet">
+    <style>
+      h2 {text-align:center;}
+    </style>
+
+    <script>
+      function changeLink() {
+      var appLocation = '
+
+
+
+pagebase2 <- '
+document.getElementById("vincerlink").src = appLocation + window.location.search;
+      }
+    </script>
+
+  </head>
+  <body onload="changeLink()">
+
+<div class="navbar navbar-collapse">
+  <div class="container">
+    <a class="navbar-brand" href="http://war-on-ice.com/" style="color:#FFFFFF; padding-top:5px"><img src="http://war-on-ice.com/images/logo-white-40.png"></a>
+    <a class="navbar-brand" href="http://war-on-ice.com/" style="color:#FFFFFF">war-on-ice.com</a>
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cap<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	  <li><a href="http://war-on-ice.com/cap/">Cap Tools Home</a></li>
+	  <li><a href="http://war-on-ice.com/buyout.html">Buyout and Recapture Calculator</a></li>
+	  <li><a href="http://blog.war-on-ice.com/salary-cap-faq/">CBA FAQ</a></li>
+	  <li role="presentation" class="divider"></li>
+	  <li><a href="http://war-on-ice.com/cap/ANA.html">Anaheim Ducks</a></li>
+	  <li><a href="http://war-on-ice.com/cap/ARI.html">Arizona Coyotes</a></li>
+	  <li><a href="http://war-on-ice.com/cap/BOS.html">Boston Bruins</a></li>
+	  <li><a href="http://war-on-ice.com/cap/BUF.html">Buffalo Sabres</a></li>
+	  <li><a href="http://war-on-ice.com/cap/CGY.html">Calgary Flames</a></li>
+	  <li><a href="http://war-on-ice.com/cap/CAR.html">Carolina Hurricanes</a></li>
+	  <li><a href="http://war-on-ice.com/cap/CHI.html">Chicago Blackhawks</a></li>
+	  <li><a href="http://war-on-ice.com/cap/COL.html">Colorado Avalanche</a></li>
+	  <li><a href="http://war-on-ice.com/cap/CBJ.html">Columbus Blue Jackets</a></li>
+	  <li><a href="http://war-on-ice.com/cap/DAL.html">Dallas Stars</a></li>
+	  <li><a href="http://war-on-ice.com/cap/DET.html">Detroit Red Wings</a></li>
+	  <li><a href="http://war-on-ice.com/cap/EDM.html">Edmonton Oilers</a></li>
+	  <li><a href="http://war-on-ice.com/cap/FLA.html">Florida Panthers</a></li>
+	  <li><a href="http://war-on-ice.com/cap/L.A.html">Los Angeles Kings</a></li>
+	  <li><a href="http://war-on-ice.com/cap/MIN.html">Minnesota Wild</a></li>
+	  <li><a href="http://war-on-ice.com/cap/MTL.html">Montreal Canadiens</a></li>
+	  <li><a href="http://war-on-ice.com/cap/NSH.html">Nashville Predators</a></li>
+	  <li><a href="http://war-on-ice.com/cap/N.J.html">New Jersey Devils</a></li>
+	  <li><a href="http://war-on-ice.com/cap/NYI.html">New York Islanders</a></li>
+	  <li><a href="http://war-on-ice.com/cap/NYR.html">New York Rangers</a></li>
+	  <li><a href="http://war-on-ice.com/cap/OTT.html">Ottawa Senators</a></li>
+	  <li><a href="http://war-on-ice.com/cap/PHI.html">Philadelphia Flyers</a></li>
+	  <li><a href="http://war-on-ice.com/cap/PIT.html">Pittsburgh Penguins</a></li>
+	  <li><a href="http://war-on-ice.com/cap/S.J.html">San Jose Sharks</a></li>
+	  <li><a href="http://war-on-ice.com/cap/STL.html">St. Louis Blues</a></li>
+	  <li><a href="http://war-on-ice.com/cap/T.B.html">Tampa Bay Lightning</a></li>
+	  <li><a href="http://war-on-ice.com/cap/TOR.html">Toronto Maple Leafs</a></li>
+	  <li><a href="http://war-on-ice.com/cap/VAN.html">Vancouver Canucks</a></li>
+	  <li><a href="http://war-on-ice.com/cap/WSH.html">Washington Capitals</a></li>
+	  <li><a href="http://war-on-ice.com/cap/WPG.html">Winnipeg Jets</a></li>
+	</ul>
+      </li>
+
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	  <li><a href="http://war-on-ice.com/playertable.html">Skater Statistics</a></li>
+	  <li><a href="http://war-on-ice.com/playerseason.html">Skater History</a></li>
+	  <li><a href="http://war-on-ice.com/hexplayers.html">Skater Hextally</a></li>
+	  <li role="presentation" class="divider"></li>
+	  <li><a href="http://war-on-ice.com/goalietable.html">Goaltender Statistics</a></li>
+	  <li><a href="http://war-on-ice.com/goalieseason.html">Goaltender History</a></li>
+	  <li><a href="http://war-on-ice.com/hexgoalies.html">Goaltender Hextally</a></li>
+	  <li role="presentation" class="divider"></li>
+	  <li><a href="http://war-on-ice.com/WARboard.html">Wins Above Replacement</a></li>
+	</ul>
+      </li>
+
+
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	  <li><a href="http://war-on-ice.com/standings.html">Team Standings</a></li>
+	  <li role="presentation" class="divider"></li>
+	  <li><a href="http://war-on-ice.com/teamtable.html">Team Statistics</a></li>
+	  <li><a href="http://war-on-ice.com/teambygame.html">Team History</a></li>
+	  <li><a href="http://war-on-ice.com/hexteams.html">Team Hextally</a></li>
+	  <li><a href="http://war-on-ice.com/team-goals-above-baseline.html">Team Goals Above Baseline</a></li>
+	</ul>
+      </li>
+
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Games/Series<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	   <li><a href="http://war-on-ice.com/gametable.html">Game Table</a></li>
+	   <li><a href="http://war-on-ice.com/series.html">Series Summaries</a></li>
+	</ul>
+      </li>
+
+
+      <li><a href="http://blog.war-on-ice.com/">Blog</a></li>
+      <li><a href="http://blog.war-on-ice.com/annotated-glossary/">Glossary</a></li>
+
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Labs<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	  <li><a href="http://war-on-ice.com/pull-the-goalie.html">Pulling The Goalie</a></li>
+	  <li><a href="http://war-on-ice.com/bench-assists.html">Bench Assists and Gordie Howe Hat Tricks</a></li>
+	  <li><a href="http://war-on-ice.com/burtch-dcorsi.html">dCorsi and dFenwick by @SteveBurtch</a></li>
+	  <li><a href="http://war-on-ice.com/similarity-scores.html">Similarity Scores by @MannyElk</a></li>
+	  <li><a href="http://war-on-ice.com/bombay-scores.html">Bombay Scores by @MannyElk</a></li>
+	</ul>
+      </li>
+
+
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+	  <li role="presentation" class="dropdown-header">Contributors</li>
+	  <li><a href="http://www.twitter.com/war_on_ice" target="_blank">@war_on_ice</a></li>
+	  <li><a href="http://www.twitter.com/acthomasca" target="_blank">@acthomasca</a></li>
+	  <li><a href="http://www.twitter.com/stat_sam" target="_blank">@stat_sam</a></li>
+	  <li><a href="http://www.twitter.com/alexgoogs" target="_blank">@alexgoogs</a></li>
+	  <li><a href="http://www.twitter.com/SteveBurtch" target="_blank">@SteveBurtch</a></li>
+	  <li><a href="http://www.twitter.com/MikeColligan" target="_blank">@MikeColligan</a></li>
+	  <li><a href="http://www.twitter.com/MannyElk" target="_blank">@MannyElk</a></li>
+	  <li><a href="http://www.twitter.com/rink_stats" target="_blank">@rink_stats</a></li>
+	  <li><a href="http://www.twitter.com/RK_Stimp" target="_blank">@RK_Stimp</a></li>
+	  <li role="presentation" class="dropdown-header">Misc</li>
+	  <li><a href="http://blog.war-on-ice.com/site-terms-of-use/">Site Terms of Use</a></li>
+	</ul>
+      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+<div style="text-align:center;"> <!--  Google Adsense top. -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mainpage-bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5679553328"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>  <!--  Google Adsense top. -->
+
+<div class="row">   <!-- row external -->
+
+<div class="col-sm-1"> <!-- Left side ads -->
+</div>                 <!-- Left side ads -->
+
+<div class="col-sm-10">
+<div class="container" style="background-color:#FFFFFF; border: 2px solid #222222;">
+  <div class="row">  <!-- row internal -->
+    '
+
+
+
+
+pagebase3 <- '</div> <!-- row internal -->
+</div> <!-- /container -->
+
+<div style="text-align:center;">  <!-- Ads, bottom -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mainpage-bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5679553328"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>    <!-- Ads, bottom -->
+
+</div> <!-- for "col-sm-10" -->
+
+<div class="col-sm-1"  style="z-index:-1;">  <!-- Right side ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- page-sidebars -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:600px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5069137325"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- page-sidebars -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:600px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5069137325"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- page-sidebars -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:600px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5069137325"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- page-sidebars -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:600px"
+     data-ad-client="ca-pub-4204963712498051"
+     data-ad-slot="5069137325"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>  <!-- Right side ads -->
+
+</div>  <!-- row external -->
+
+
+
+
+<!-- script references -->
+<script>
+  (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+  ga("create", "UA-56470714-1", "auto");
+  ga("send", "pageview");
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+  ga("create", "UA-57453562-1", "auto");
+  ga("send", "pageview");
+
+</script>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://war-on-ice.com/js/bootstrap.js"></script>
+<script src="http://war-on-ice.com/js/scripts.js"></script>
+	</body>
+</html>"'
+
+
+
+jsbits <-
+"<link rel=\"stylesheet\" type=\"text/css\" href=\"http://war-on-ice.com/www2/site2.css?_=d6a7bb39f25b4e29106307c90f6bcd3c\">     
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"http://war-on-ice.com/www2/dataTables.responsive.css\">
+    
+    <script type=\"text/javascript\" src=\"http://war-on-ice.com/www2/site.js?_=a6f2d4070a85695086408867f18cb5a4\"></script>
+    <script type=\"text/javascript\" src=\"http://war-on-ice.com/www2/dynamic.php\" async></script>
+    <script type=\"text/javascript\" language=\"javascript\" src=\"http://war-on-ice.com/www2/dataTables.responsive.min.js\"></script>
+"

@@ -1,0 +1,11 @@
+Package: warbase
+Type: Package
+Title: Functions necessary for the operation of war-on-ice.com
+Version: 1.8.7
+Date: 2015-10-17
+Author: ACT, SLV, AGM
+Maintainer: ACT <act@acthomas.ca>
+Description: More about what it does (maybe more than one line)
+License: Us!
+Depends: dplyr, nhlscrapr, sqldf, rvest, RMySQL
+LazyData: TRUE
