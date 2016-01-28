@@ -6,22 +6,20 @@ make.common <- function () {
     load ("source-data/nhlscrapr-core.RData")
 
     ## add montreal.
-    mtlgames <- filter (mtlgames, season >= 20052006)
+    ##mtlgames <- filter (mtlgames, season >= 20052006)
     
     ## OK, here's where we make a big determination.    
     gamestest <- filter(games, season >= 20052006)
-    gamestest$date[match(paste(mtlgames$season,mtlgames$gcode),
-                         paste(gamestest$season,gamestest$gcode))] <- mtlgames$date
+##    gamestest$date[match(paste(mtlgames$season,mtlgames$gcode),
+##                         paste(gamestest$season,gamestest$gcode))] <- mtlgames$date
     
     seasons <- unique(gamestest$season)
 
     ## Just in case.
     repl <- grep("^[0-9]+$", gamestest$date)
     gamestest$date[repl] <- as.character(as.Date("1970-01-01") + as.numeric(gamestest$date[repl]))
-    team.colors <- read.csv ("source-data/teamcolors.csv")[,-1]   #http://teamcolors.arc90.com/
     
     teams <- unique(as.character(team.colors$team))#; teams <- teams[teams != ""]
-    for (cc in 1:ncol(team.colors)) team.colors[,cc] <- as.character(team.colors[,cc])
     
     message ("Common data done")
     
@@ -55,7 +53,7 @@ augment.espn <- function (season="20132014") {
 }
 ## for (season in seasons[3:11]) augment.espn(season)
 augment.spo <- function (season="20142015") {
-    source("warbase/R/sportsnet-scrape.R")
+    ##source("warbase/R/sportsnet-scrape.R")
     merge.locs.sportsnet(season)
 }
 
@@ -267,10 +265,10 @@ augment.tc.by.code <- function (season, gcode) {
           file=paste0("common-data/games/", season, gcode, ".RData"))
 }
 replace.tc.all <- function (thesegames=gamestest) {
-    library(doMC)
-    registerDoMC(parcores)
+    ##library(doMC)
+    ##registerDoMC(parcores)
     gms <- filter(thesegames, status == 3)
-    foreach (qq = 1:nrow(gms)) %dopar%
+    foreach (qq = 1:nrow(gms)) %do%
     tryCatch(augment.tc.by.code (gms$season[qq],gms$gcode[qq]),
              error=function(cond) message("Fail ",gms$season[qq],gms$gcode[qq]))
 }
