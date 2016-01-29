@@ -7,5 +7,5 @@ Author: ACT, SLV, AGM
 Maintainer: ACT <act@acthomas.ca>
 Description: More about what it does (maybe more than one line)
 License: Us!
-Depends: dplyr, nhlscrapr, sqldf, rvest, RMySQL
+Depends: dplyr, nhlscrapr, sqldf, rvest, RMySQL, foreach
 LazyData: TRUE
