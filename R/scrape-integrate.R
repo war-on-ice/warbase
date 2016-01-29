@@ -11,7 +11,8 @@ get.one.day <- function (day, direc="espn-games/") {
     mainpage <- readLines(paste0("http://scores.espn.go.com/nhl/scoreboard?date=",day))
     gameids <- unique(unlist(regmatches (mainpage, gregexpr("gameId=[0-9]+", mainpage))))
     gamebits <- lapply(gameids, function(this.id) {
-        readLines(paste0("http://sports.espn.go.com/nhl/gamecast/data/masterFeed?lang=en&isAll=true&rand=0&",this.id))
+      tryCatch(readLines(paste0("http://sports.espn.go.com/nhl/gamecast/data/masterFeed?lang=en&isAll=true&rand=0&",this.id)),
+               error=function(cond) {message("whoops ",day); NULL})
     })
     save (mainpage, gameids, gamebits, file=paste0(direc,"espn-",day,".RData"))
 }
@@ -53,27 +54,29 @@ parse.game <- function (gamefeed) tryCatch({
 
 
 parse.day <- function (GameDate=as.character(Sys.Date()), get=FALSE, direc="espn-games/") {
-    ## GameDate="20131004"
+    ## GameDate="20130702"
     GameDate <- gsub("-","", GameDate); print(GameDate)
     if (get) get.one.day(GameDate, direc)
     tryCatch(load(paste0(direc,"espn-",GameDate,".RData")),
              error=function(cond) {get.one.day(GameDate, direc); load(paste0(direc,"espn-",GameDate,".RData"))})
-    evtable <- do.call(rbind, lapply(gamebits, parse.game))
+    
+    evtable <- if (length (gamebits) > 0) rbind_all(lapply(gamebits, parse.game)) else data.frame()
     evtable
 }
 
 prep.season <- function(year1=2005, savethis=TRUE, direc="source-data/") {
-
+    dir.create ("espn-games", showWarnings = FALSE)
+    year1 <- as.numeric(year1)
     dates <- seq(as.Date(paste0(year1,"-07-01")),
                  min(as.Date(paste0(year1+1,"-06-30")), Sys.Date()), by=1)
     gimme <- lapply(dates, parse.day)
-    event.table <- do.call(rbind, gimme)
+    event.table <- rbind_all (gimme)
     ## games.list <- unique(paste0(gimme.too$GameDate, gimme.too$awayteam, gimme.too$hometeam))
     if (year1 < 2011) event.table$hometeam[event.table$hometeam=="WPG"] <- "ATL"
     if (year1 < 2011) event.table$awayteam[event.table$awayteam=="WPG"] <- "ATL"
     if (year1 < 2014) event.table$hometeam[event.table$hometeam=="ARI"] <- "PHX"
     if (year1 < 2014) event.table$awayteam[event.table$awayteam=="ARI"] <- "PHX"
-    if (savethis) save (event.table, file=paste0(direc,"espn-", year, year+1,".RData"))
+    if (savethis) save (event.table, file=paste0(direc,"espn-", year1, year1+1,".RData"))
     return(event.table)
     
 }
@@ -165,12 +168,14 @@ test.routines <- function () {
 
 
 get.one.day.sportsnet <- function (day, direc="espn-games/") {
-    #day="2015-10-07"
+    #day="2015-12-08"
     message(day)
     mainpage <- readLines(paste0("http://www.sportsnet.ca/hockey/nhl/scores/?datepicker-date=",day))
     gameids <- unique(unlist(regmatches (mainpage, gregexpr("http://www.sportsnet.ca/hockey/nhl/livetracker/game/[0-9]+", mainpage))))
 
-    gamebits <- lapply(gameids, function(this.id) readLines(this.id))
+    gamebits <- lapply(gameids, function(this.id) 
+      tryCatch(readLines(this.id), error=function(cond) {message("whoops ",day); NULL})
+    )
     save (mainpage, gameids, gamebits, file=paste0(direc,"spo-",day,".RData"))
 }
 
@@ -201,7 +206,7 @@ parse.game.sportsnet <- function (gamefeed, GameDate) tryCatch({
 
 
 parse.day.sportsnet <- function (GameDate=as.character(Sys.Date()), getdl=FALSE, direc="espn-games/") {
-    ## GameDate="2015-10-07"
+    ## GameDate="2015-12-08"
     message ("Parsing ",GameDate)
     if (getdl) get.one.day.sportsnet(GameDate, direc)
     tryCatch(load(paste0(direc,"spo-",GameDate,".RData")),
@@ -214,8 +219,10 @@ parse.day.sportsnet <- function (GameDate=as.character(Sys.Date()), getdl=FALSE,
 }
 
 prep.season.sportsnet <- function(year1=2015, savethis=TRUE, arch.direc="source-data/") {
-
-    dates <- seq(as.Date(paste0(year1,"-10-08")),
+  
+    year1 <- as.numeric(year1)
+  
+    dates <- seq(as.Date(paste0(year1,"-10-01")),
                  min(as.Date(paste0(year1+1,"-06-30")), Sys.Date()), by=1)
     gimme <- lapply(dates, parse.day.sportsnet)
     event.table <- do.call(rbind, gimme)

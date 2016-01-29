@@ -22,6 +22,8 @@ make.common <- function () {
     teams <- unique(as.character(team.colors$team))#; teams <- teams[teams != ""]
     
     message ("Common data done")
+    suppressWarnings(dir.create("common-data"))  
+    suppressWarnings(dir.create("common-data/games"))  
     
     save(gamestest, roster.master, roster.unique,
          teams, team.colors, seasons, file="common-data/woi-common.RData")
@@ -116,7 +118,6 @@ replace.pbp.all <- function () {
         load (paste0("source-data/nhlscrapr-",ss,".RData"))
         
         for (qq in which(gamestest$status == 3 & gamestest$season == ss))  {
-##        foreach (qq = which(gamestest$status == 3 & gamestest$season == ss)) %do% {
             season <- gamestest$season[qq]
             gcode <- gamestest$gcode[qq]
             
